@@ -9,7 +9,7 @@ let package = Package(
             name: "Core",
             targets: [
                 "CoreSwift",
-                "CoreFoundation"
+//                "CoreFoundation"
             ]
         ),
     ],
@@ -20,19 +20,19 @@ let package = Package(
             name: "CoreSwift",
             path: "Sources/Swift"
         ),
-        .target(
-            name: "CoreFoundation",
-            path: "Sources/Foundation"
-        ),
+//        .target(
+//            name: "CoreFoundation",
+//            path: "Sources/Foundation"
+//        ),
         .testTarget(
             name: "CoreTests",
             dependencies: ["CoreSwift"],
             path: "Tests/Swift"
         ),
-        .testTarget(
-            name: "CoreFoundationTests",
-            dependencies: ["CoreFoundation"],
-            path: "Tests/Foundation"
-        )
+//        .testTarget(
+//            name: "CoreFoundationTests",
+//            dependencies: ["CoreFoundation"],
+//            path: "Tests/Foundation"
+//        )
     ]
 )
