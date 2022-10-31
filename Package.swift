@@ -4,12 +4,14 @@ import PackageDescription
 
 let package = Package(
     name: "Core",
+    platforms: [
+        .macOS(.v11)
+    ],
     products: [
         .library(
             name: "Core",
             targets: [
-                "CoreSwift",
-//                "CoreFoundation"
+                "RockNCodeCore",
                 "SwiftExtensions",
                 "FoundationExtensions"
             ]
@@ -19,7 +21,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CoreSwift",
+            name: "RockNCodeCore",
+            dependencies: [
+                "SwiftExtensions",
+                "FoundationExtensions"
+            ],
+            path: "Sources/Core"
+        ),
         .target(
             name: "SwiftExtensions",
             path: "Sources/Swift"
@@ -29,8 +37,10 @@ let package = Package(
             path: "Sources/Foundation"
         ),
         .testTarget(
-            name: "CoreTests",
-            dependencies: ["CoreSwift"],
+            name: "RockNCodeCoreTests",
+            dependencies: ["RockNCodeCore"],
+            path: "Tests/Core"
+        ),
         .testTarget(
             name: "SwiftExtensionsTests",
             dependencies: ["SwiftExtensions"],
