@@ -12,24 +12,27 @@ import FoundationExtensions
 import SwiftExtensions
 
 public struct Command {
-    
+
     // MARK: Properties
     
-    private let process: Process
-    private let pipe: Pipe
+    public let process: Processable
+    public let pipe: Pipable
     
     // MARK: Initialisers
     
-    public init() {
-        self.process = .init()
-        self.pipe = .init()
+    public init(
+        process: Processable = Process(),
+        pipe: Pipable = Pipe()
+    ) {
+        self.process = process
+        self.pipe = pipe
     }
     
 }
 
-// MARK: - RunnableCommand
+// MARK: - Commandable
 
-extension Command: RunnableCommand {
+extension Command: Commandable {
     
     @discardableResult
     public func callAsFunction(

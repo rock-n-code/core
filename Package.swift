@@ -5,7 +5,11 @@ import PackageDescription
 let package = Package(
     name: "Core",
     platforms: [
-        .macOS(.v11)
+        .macOS(.v11),
+        .macCatalyst(.v14),
+        .iOS(.v14),
+        .tvOS(.v14),
+        .watchOS(.v7)
     ],
     products: [
         .library(
