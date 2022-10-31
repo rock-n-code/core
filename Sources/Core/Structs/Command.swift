@@ -15,8 +15,15 @@ public struct Command {
     
     // MARK: Properties
     
-    private let process = Process()
-    private let pipe = Pipe()
+    private let process: Process
+    private let pipe: Pipe
+    
+    // MARK: Initialisers
+    
+    public init() {
+        self.process = .init()
+        self.pipe = .init()
+    }
     
 }
 
