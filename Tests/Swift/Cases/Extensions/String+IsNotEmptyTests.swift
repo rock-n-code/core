@@ -1,13 +1,13 @@
 //
 //  String+IsNotEmptyTests.swift
-//  CoreSwiftTests
+//  SwiftExtensionsTests
 //
 //  Created by Javier Cicchelli on 30/10/2022.
 //  Copyright © 2022 Röck+Cöde. All rights reserved.
 //
 
 import XCTest
-import CoreSwift
+import SwiftExtensions
 
 final class StringIsNotEmptyTests: XCTestCase {
 

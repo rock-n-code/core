@@ -10,6 +10,7 @@ let package = Package(
             targets: [
                 "CoreSwift",
 //                "CoreFoundation"
+                "SwiftExtensions",
             ]
         ),
     ],
@@ -18,6 +19,8 @@ let package = Package(
     targets: [
         .target(
             name: "CoreSwift",
+        .target(
+            name: "SwiftExtensions",
             path: "Sources/Swift"
         ),
 //        .target(
@@ -27,6 +30,9 @@ let package = Package(
         .testTarget(
             name: "CoreTests",
             dependencies: ["CoreSwift"],
+        .testTarget(
+            name: "SwiftExtensionsTests",
+            dependencies: ["SwiftExtensions"],
             path: "Tests/Swift"
         ),
 //        .testTarget(
