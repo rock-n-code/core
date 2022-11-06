@@ -30,7 +30,7 @@ public struct Execution {
     
 }
 
-// MARK: - Commandable
+// MARK: - Executable
 
 extension Execution: Executable {
     

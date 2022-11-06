@@ -10,6 +10,7 @@ public extension String {
     
     // MARK: Computed properties
     
+    /// A Boolean value indicating whether a string has characters.
     var isNotEmpty: Bool { !isEmpty }
     
 }

@@ -10,6 +10,7 @@ public extension String {
     
     // MARK: Constants
     
+    /// A constant value representing a string that has no characters.
     static let empty = ""
     
 }
