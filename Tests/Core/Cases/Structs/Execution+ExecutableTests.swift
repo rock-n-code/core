@@ -1,5 +1,5 @@
 //
-//  Command+CommandableTests.swift
+//  Execution+ExecutableTests.swift
 //  RockNCodeCoreTests
 //
 //  Created by Javier Cicchelli on 31/10/2022.
@@ -9,7 +9,7 @@
 import XCTest
 import RockNCodeCore
 
-final class CommandCommandableTests: XCTestCase {
+final class CommandExecutableTests: XCTestCase {
     
     // MARK: Tests
     

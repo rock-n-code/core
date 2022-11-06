@@ -1,5 +1,5 @@
 //
-//  Command.swift
+//  Execution.swift
 //  RockNCodeCore
 //
 //  Created by Javier Cicchelli on 31/10/2022.
@@ -11,7 +11,7 @@ import Foundation
 import FoundationExtensions
 import SwiftExtensions
 
-public struct Command {
+public struct Execution {
 
     // MARK: Properties
     
@@ -32,7 +32,7 @@ public struct Command {
 
 // MARK: - Commandable
 
-extension Command: Commandable {
+extension Execution: Executable {
     
     @discardableResult
     public func callAsFunction(
@@ -71,5 +71,4 @@ public enum CommandError: Error {
     case pathToCommandNotDefined
     case runNotSuccessful(reason: Process.TerminationReason, status: Int)
 }
-
 #endif

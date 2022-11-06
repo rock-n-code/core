@@ -1,5 +1,5 @@
 //
-//  Commandable.swift
+//  Executable.swift
 //  RockNCodeCore
 //
 //  Created by Javier Cicchelli on 31/10/2022.
@@ -9,7 +9,7 @@
 #if os(macOS) || targetEnvironment(macCatalyst)
 import Foundation
 
-public protocol Commandable {
+public protocol Executable {
     
     // MARK: Functions
     
